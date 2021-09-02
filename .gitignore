@@ -1,0 +1,9 @@
+env
+*.exe
+*.pyc
+*database.sql
+*__
+*.log
+*.debug
+secret.py
+pwd/
