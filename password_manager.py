@@ -1,6 +1,7 @@
 
 from secret import login_key
 from menu import menu, create, find, find_accounts
+from getpass import getpass
 # menu
 # 1. create new password for a site
 # 2. find password for a site
@@ -8,7 +9,7 @@ from menu import menu, create, find, find_accounts
 
 secret = login_key()
 
-passw = (input('provide the master password to start using dinindupwdmanager500: '))
+passw = (getpass(prompt='provide the master password to start using dinindupwdmanager500: '))
 
 if passw == secret:
     print('You\'re in')
@@ -18,7 +19,7 @@ else:
     exit() 
 
 choice = menu()
-while choice != 'Q':
+while choice != 'q':
     if choice == '1':
         create()
     if choice == '2':
