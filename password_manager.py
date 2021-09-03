@@ -1,14 +1,14 @@
 
+from secret import login_key
 from menu import menu, create, find, find_accounts
-from .secrets import key
 # menu
 # 1. create new password for a site
 # 2. find password for a site
 # 3. Find all sites connected to an email
 
-secret = key()
+secret = login_key()
 
-passw = input('provide the master password to start using kallemanager3000: ')
+passw = (input('provide the master password to start using dinindupwdmanager500: '))
 
 if passw == secret:
     print('You\'re in')

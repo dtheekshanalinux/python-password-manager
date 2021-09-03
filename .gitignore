@@ -7,3 +7,4 @@ env
 *.debug
 secret.py
 pwd/
+.env

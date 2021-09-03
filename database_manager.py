@@ -1,4 +1,5 @@
 import psycopg2
+from secret import user, password
 
 def store_passwords(password, user_email, username, url, app_name):
     try:
@@ -13,7 +14,7 @@ def store_passwords(password, user_email, username, url, app_name):
 
 def connect():
     try:
-        connection = psycopg2.connect(user='dinindupwd', password='dinindu123', host='127.0.0.1', database='PWD')
+        connection = psycopg2.connect(user=user(), password=password(), host='127.0.0.1', database='pwd')
         return connection
     except (Exception, psycopg2.Error) as error:
         print(error)
@@ -28,6 +29,7 @@ def find_password(app_name):
         result = cursor.fetchone()
         print('Password is: ' )
         print(result[0])
+        return result[0]
     
     except (Exception, psycopg2.Error) as error:
         print(error)
